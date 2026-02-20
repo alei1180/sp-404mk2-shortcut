@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortcut Roland SP-404MK2</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            padding: 20px 30px;
+            border-radius: 8px;
+        }
+        
+        .header-with-search {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #2c8656;
+            padding-bottom: 15px;
+        }
+        
+        .title-section h1 {
+            
+            margin: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .title-section p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .search-compact {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 30px;
+            padding: 4px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s;
+        }
+        
+        .search-compact:focus-within {
+            border-color: #a7c5b7;
+        }
+        
+        #searchInput {
+            padding: 8px 16px;
+            font-size: 0.95em;
+            border: none;
+            background: transparent;
+            width: 220px;
+            outline: none;
+        }
+        
+        .search-icon:hover {
+            background-color: #2c8656;
+        }
+        
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+        
+        .page-header {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 30px;
+            border-top: 1px dashed #ccc;
+            padding-top: 15px;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+            background-color: white;
+            margin: 20px 0 30px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        th {
+            background-color: #a7c5b7;
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 10px;
+            font-size: 1.05em;
+            border: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        td {
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        
+        .function-col {
+            font-weight: 600;
+            color: #1a1a1a;
+            white-space: nowrap;
+            width: 30%;
+        }
+        
+        .explain-col {
+            color: #2c3e50;
+        }
+        
+        .note {
+            background-color: #fcf8e7;
+            border-left: 5px solid #a7c5b7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .button-highlight {
+            background-color: #eef;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: monospace;
+            font-weight: bold;
+            border: 1px solid #ccd;
+        }
+        
+        .page-marker {
+            padding: 10px 20px;
+            margin-top: 25px;
+            font-weight: bold;
+            border-left: 15px solid #2c8656;
+            border-bottom: 2px solid #2c8656;
+            font-size: 1.2em;
+        }
+        
+        footer {
+            margin-top: 30px;
+            font-size: 0.85em;
+            text-align: center;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        
+        .no-results-message {
+            text-align: center;
+            padding: 40px;
+            border: 2px solid #2c8656;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-size: 1.2em;
+            display: none;
+        }
+        
+        .table-hidden {
+            display: none !important;
+        }
+        
+        .marker-hidden {
+            display: none !important;
+        }
+        
+        .highlight {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 700px) {
+            .header-with-search {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .search-compact {
+                width: 100%;
+            }
+            
+            #searchInput {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header-with-search">
+        <div class="title-section">
+            <h1>Горячие клавиши Roland SP-404MK2</h1>
+        </div>
+        
+        <div class="search-compact">
+            <input type="text" id="searchInput" placeholder="Поиск..." autocomplete="off">
+        </div>
+    </div>
+
+    <div id="noResultsMessage" class="no-results-message">
+        Ничего не найдено. Попробуйте изменить запрос.
+    </div>
+    <div class="page-marker" id="marker-shift">Комбинации с кнопкой [SHIFT]</div>
+    <table id="table-shift">
+        <thead><tr><th>Удерживая [SHIFT]</th><th>Функция</th><th>Описание</th></tr></thead>
+        <tbody>
+            <tr><td>Pad [1]</td><td>FIXED VELOCITY</td><td>Фиксирует в максимальном значении 127 силу нажатия (громкость) пэда.</td></tr>
+            <tr><td>Pad [2]</td><td>16 VELOCITY</td><td>Пошагово изменеяет силу нажатия пэда (громкости).</td></tr>
+            <tr><td>Pad [3]</td><td>CUE</td><td>Выводит звук только через разъем наушников PHONES и не выводит на разъем LINE OUT или USB. Таким образом при игре вживую или в подобных ситуациях можно предварительно прослушать (проверить) звук сэмпла в наушниках. Нельзя отправлять два или более сэмпла в CUE одновременно.</td></tr>
+            <tr><td>Pad [4]</td><td>CHROMATIC</td><td>Воспроизводит сэмплы изменяя их высоту (питч) в хроматической гамме с помощью пэдов. Хроматический режим нельзя использовать, когда горит кнопка PATTERN SELECT. В хроматическом режиме может воспроизводиться только один сэмпл за раз.</td></tr>
+            <tr><td>Pad [5]</td><td>EXCHANGE</td><td>Меняет местами сэмплы между двумя выбранными пэдами или банками.</td></tr>
+            <tr><td>Pad [6]</td><td>INIT PARAM</td><td>Сбрасывает параметры, заданные в сэмпле (например, начальную точку, конечную точку, темп и другие) до значений по умолчанию.</td></tr>
+            <tr><td>Pad [7]</td><td>PAD LINK</td><td>Объединяет несколько пэдов (до четырех) в одну группу. Задав группу, вы можете заставить все пэды в группе воспроизводить звук, просто нажав один пэд из этой группы. Можно создавать до 10 групп.</td></tr>
+            <tr><td>Pad [8]</td><td>MUTE GROUP</td><td>Группирует сэмплы, которые вы не хотите воспроизводить одновременно (не хотите накладывать друг на друга). При попытке одновременного воспроизведения всех сэмплов в этой группе будет слышен только тот сэмпл, который начал воспроизводиться последним. Группа может состоять из 16 сэмплов. Можно создавать до 10 групп.</td></tr>
+            <tr><td>Pad [9]</td><td>METRONOME</td><td>Влючает/отключает звук метронома. Метроном - это встроенный инструмент для отсчета ритма и темпа.</td></tr>
+            <tr><td>Pad [10]</td><td>COUNT-IN</td><td>Включает отсчет времени перед началом сэмплирования. COUNTIN 1MEAS - однократный отсчет. COUNTIN 2MEAS - двукратный отсчет. COUNTIN WAIT - когда уровень входного аудиосигнала превышает значение, установленное в параметре Auto Trig Level, начинается сэмплирование. COUNTIN OFF - отсчет времени не используется, сэмплирование начинается сразу после нажатия пэдов [1]–[16], а затем нажатия кнопки [REC].</td></tr>
+            <tr><td>Pad [11]</td><td>TAP TEMPO</td><td>Интуитивно устанавливает темп, при нажимании на пэд в такт, как если бы вы хлопали в ладоши в такт музыке. Это полезная функция, когда вы хотите играть в такт с другими инструментами или в ритме композиции.</td></tr>
+            <tr><td>Pad [12]</td><td>GAIN</td><td>Отображает меню настроек усиления UTILITY MENU &gt; SYSTEM &gt; GAIN.</td></tr>
+            <tr><td>Pad [13]</td><td>UTILITY</td><td>Отображает меню системных настроек UTILITY MENU.</td></tr>
+            <tr><td>Pad [14]</td><td>IMPORT/EXPORT</td><td>Отображает меню импорта/экспорта UTILITY MENU &gt; IMPORT (IMPORT/EXPORT MENU).</td></tr>
+            <tr><td>Pad [15]</td><td>PAD SETTING</td><td>Отображает меню настроек пэдов (UTILITY MENU &gt; PAD SET).</td></tr>
+            <tr><td>Pad [16]</td><td>EFX SETTING</td><td>Отображает меню настроек эффектов (UTILITY MENU > EFX SET).</td></tr>
+            <tr><td>[BUS FX] button</td><td>MUTE BUS</td><td>Временно отключает звук, передаваемый на шину (звук воспроизведения сэмпла или звук, поступающий на входной разъем INPUT), и выводит только звук эффекта.</td></tr>
+            <tr><td>[HOLD] button</td><td>PAUSE</td><td>Приостановливает воспроизведение текущих сэмплов.</td></tr>
+            <tr><td>[EXT SOURCE] button</td><td>INPUT SETTING</td><td>Отображает экран настроек входа.</td></tr>
+            <tr><td>[SUB PAD] button</td><td>PROJECT</td><td>Отображает экран настроек входного сигнала (SELECT PROJECT).</td></tr>
+            <tr><td>[MARK] button (не менее 3 сек)</td><td>SAVE EFX PARAM</td><td>Сохраняет основные параметры эффектов, назначенных на шины BUS 1 и BUS 2.</td></tr>
+            <tr><td>[PITCH/SPEED] button</td><td>ENVELOPE</td><td>Устанавливает изменение громкости во время воспроизведения сэмпла.</td></tr>
+            <tr><td>[START/END] button</td><td>CHOP</td><td>Разделяет сэмпл по позициям маркеров и назначает полученные сэмплы на отдельные пэды.</td></tr>
+            <tr><td>[PATTERN SELECT] button</td><td>UNDO</td><td>Отменяет только что введенные (записанные) данные. <br>* Работает только при записи паттерна.</td></tr>
+            <tr><td>[ROLL] button</td><td>ROLL SET</td><td>Показывает, с какой частотой повторяется сэмпл в режиме ROLL (скорость повторения).</td></tr>
+            <tr><td>[REVERSE] button + pads [1]-[16]</td><td>Pad MUTE</td><td>Включает/выключает (mute) звук выбранного пэда.</td></tr>
+            <tr><td>[REVERSE] button + [REMAIN] button</td><td>Pad MUTE MODE</td><td>Фиксирует кнопки [SHIFT] и [REVERSE] в нажатом состоянии, для более удобного включения/выключения (mute) пэдов.</td></tr>
+            <tr><td>[LOOP] button</td><td>PING-PONG LOOP</td><td>Зацикливает сэмпл, воспроизводя его попеременно вперед и назад.</td></tr>
+            <tr><td>[GATE] button</td><td>GATE ALL ON/OFF</td><td>Включает/выключает параметр GATE для всех сэмплов в выбранной банке.</td></tr>
+            <tr><td>[BPM SYNC] button</td><td>SYNC ALL ON/OFF</td><td>Включает/выключает параметр BPM SYNC для всех сэмплов в выбранной банке.</td></tr>
+            <tr><td>[REC] button</td><td>TR-REC</td><td>Переключает в режим записи паттерна с помощью TR-REC. Записывает сэмплы в играющий паттерн. <br>* Работает только при воспроизведении паттерна.</td></tr>
+            <tr><td>Bank [A/F]-[E/J] buttons</td><td>BANK VOLUME</td><td>Регулирует общую громкость для указанного банка.</td></tr>
+            <tr><td>[REMAIN] button (не менее 3 сек)</td><td>LIVE MODE</td><td>Отключает кнопки, не используеющиеся при живом выступлении (связанных с сэмплированием и редактированием).</td></tr>
+            <tr><td>[COPY] button</td><td>BANK PROTECT</td><td>Защищает сэмплы и паттерны в банке от копирования, перезаписи или случайного удаления.</td></tr>
+            <tr><td>[VALUE] knob (нажать)</td><td>MARK</td><td>Переключает функцию, вызываемую кнопкой [MARK]. <br>* Переключение между SBS (skip-back sampling) и Looper.</td></tr>
+            <tr><td>[RESAMPLE] button</td><td>SAMPLE MERGE MODE</td><td>Переключает в режим объединения сэмплов (Sample Merge).</td></tr>
+            <tr><td>[RECORD SETTING] button</td><td>SOUND GENERATOR MODE</td><td>Переключает в режим генератора звука (часто применяется для генерации баса).</td></tr>
+            <tr><td>[EXIT] button</td><td>STOP</td><td>Останавливает воспроизведение всех сэмплов.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="page-marker" id="marker-remain">Комбинации с кнопкой [REMAIN]</div>
+    <table id="table-remain">
+        <thead><tr><th>Удерживая [REMAIN]</th><th>Функция (описание)</th></tr></thead>
+        <tbody>
+            <tr><td>Pads [1]-[16]</td><td>Устанавливает, шину эффектов для выбранного пэда (BUS 1, BUS 2, Без шины).</td></tr>
+            <tr><td>Bank [A/F]-[E/J] buttons</td><td>Устанавливает шину эффектов для всех сэмплов в банке (BUS 1, BUS 2, Без шины).</td></tr>
+            <tr><td>[MFX] button</td><td>Оставляет открытым экран редактирования эффектов (по умолчанию экран открыт несколько секунд).</td></tr>
+            <tr><td>[BUS FX] button</td><td>Меняет местами эффекты BUS 1 и BUS 2. Значения параметров сохраняются.</td></tr>
+            <tr><td>Edits the following parameters on the pitch/speed settings screen<ul><li>SPEED</li> <li>PITCH</li><li>VOLUME</li><li>PAN</li><li>BPM</li><li>BPM SYNC</li><li>GATE</li><li>LOOP</li><li>REVERSE</li></ul></td><td>Одновременное редактирование параметров сэмплов Pitch/Speed в одной банке: SPEED, PITCH, VOLUME, PAN, BPM, BPM SYNC, GATE, LOOP, REVERSE.</td></tr>
+            <tr><td>Edits the following parameters on the envelope settings screen<ul><li>ATTACK</li> <li>HOLD</li><li>RELEASE</li><li>BPM SYNC</li><li>GATE</li><li>LOOP</li><li>REVERSE</li></ul></td><td>Одновременное редактирование параметров сэмплов Envelope в одной банке: ATTACK, HOLD, RELEASE, BPM SYNC, GATE, LOOP, REVERSE.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="page-marker" id="marker-value">Комбинации с кнопкой [VALUE]</div>
+    <table id="table-value">
+        <thead><tr><th>Удерживая [VALUE]</th><th>Функция (описание)</th></tr></thead>
+        <tbody>
+            <tr><td>Pads [1]-[16]</td><td>Выбирает сэмпл без воспроизведения звука. Также выбирает паттерн, если горит [PATTERN SELECT] (паттерн не играет).</td></tr>
+            <tr><td>[BUS FX] button</td><td>Временно отключает эффекты на шинах BUS 3 и BUS 4.</td></tr>
+            <tr><td>[SUB PAD] button</td><td>Минимизирует небольшие расхождения во времени при игре нескольких сэмплов одновременно.</td></tr>
+            <tr><td>Effect buttons ([FILTER+DRIVE] - [MFX])</td><td>Применяет эффекты только пока удерживается кнопка эффекта.</td></tr>
+            <tr><td>[GATE] button</td><td>Включает/выключает режим воспроизведения one-shot playback для сэмпла.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="page-marker" id="marker-del">Комбинации с кнопкой [DEL]</div>
+    <table id="table-del">
+        <thead><tr><th>Удерживая [DEL]</th><th>Функция (описание)</th></tr></thead>
+        <tbody>
+            <tr><td>[MARK] button</td><td>Удаляет из паттерна автоматизацию с эффектами, записанные с помощью EFX MOTION REC. <br>* Доступно на экране редактирования паттерна.</td></tr>
+            <tr><td>[REVERSE] button</td><td>Удаляет из паттерна автоматизацию глушения пэдов, записанные с помощью EFX MOTION REC. <br>* Доступно на экране редактирования паттерна.</td></tr>
+            <tr><td>[EXIT] button</td><td>Удаляет все сэмплы или паттерны в банке.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="page-marker" id="marker-copy">Комбинации с кнопкой [COPY]</div>
+    <table id="table-copy">
+        <thead><tr><th>Удерживая [COPY]</th><th>Функция (описание)</th></tr></thead>
+        <tbody>
+            <tr><td>Редактирование Pitch/Speed</td><td>Одновременное редактирование параметров сэмплов Pitch/Speed в одной Mute Group: SPEED, PITCH, VOLUME, PAN, BPM, BPM SYNC, GATE, LOOP, REVERSE.</td></tr>
+            <tr><td>Редактирование Envelope</td><td>Одновременное редактирование параметров сэмплов Envelope в одной Mute Group: ATTACK, HOLD, RELEASE, BPM SYNC, GATE, LOOP, REVERSE.</td></tr>
+            <tr><td>[EXIT] button</td><td>Копирует все сэмплы или паттерны из одной банки в другую.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="page-marker" id="marker-mfx">Комбинации с кнопкой [MFX]</div>
+    <table id="table-mfx">
+        <thead><tr><th>Удерживая [MFX]</th><th>Функция (описание)</th></tr></thead>
+        <tbody>
+            <tr><td>[DJFX LOOPER] button</td><td>Отображает список MFX, начиная с номера 17.</td></tr>
+            <tr><td>[ISOLATOR] button</td><td>Отображает список MFX, начиная с номера 33.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="page-marker" id="marker-other">Горячие клавиши в DJ mode</div>
+    <table id="table-other">
+        <thead><tr><th>Действие</th><th>Параметр</th><th>Описание</th></tr></thead>
+        <tbody>
+            <tr><td>[SHIFT] + [REVERSE] + pad [13] (CH1)<br>[SHIFT] + [REVERSE] + pad [15] (CH2)</td><td>MUTE</td><td>Заглушает воспроизводящийся сэмпл.</td></tr>
+            <tr><td>[SHIFT] + pads [1]–[16]</td><td>-</td><td>Воспроизведение сэмпла с позиции маркера, установленного для этого сэмпла.</td></tr>
+            <tr><td>[SHIFT] + [REMAIN]</td><td>-</td><td>Фиксирует кнопку [SHIFT] в нажатом состоянии. Упрощает выбор маркера и воспроизведение. Нажмите [EXIT] для отмены.</td></tr>
+            <tr><td>[SHIFT] + [MARK]</td><td>-</td><td>Добавление маркеров во время проигрывания сэмпла в режиме DJ.</td></tr>
+            <tr><td>[SHIFT] + [START/END]</td><td>-</td><td>Редактирование маркеров во время проигрывания сэмпла в режиме DJ.</td></tr>
+            <tr><td>[SHIFT] + [DEL] + pads [1]–[16]</td><td>-</td><td>В режиме DJ удаляет маркеры, установленные для сэмплов.</td></tr>
+            <tr><td>[SHIFT] + [ROLL]</td><td>ROLL SIZE</td><td>Устанавливает интервал ролла (1/4, 1/2, 1 или 2 такта). Устанавливайте до начала воспроизведения ролла.</td></tr>
+            <tr><td>[ROLL] + pad [13] (CH1)</td><td>-</td><td>Зацикливает воспроизведение сэмпла с заданным интервалом (ROLL). Не работает, если интервал ролла длиннее сэмпла.</td></tr>
+            <tr><td>[ROLL] + pads [1]–[4]</td><td>-</td><td>Изменяет интервал ролла во время его воспроизведения.<br>Pad [1]: четверть (1/4)<br>Pad [2]: половинная (1/2)<br>Pad [3]: целая нота (1)<br>Pad [4]: две целых (2)</td></tr>
+            <tr><td>[REMAIN] + pad [14] (CH1)<br>[REMAIN] + pad [16] (CH2)</td><td>BUS FX</td><td>Устанавливает шину для сэмплов CH1/CH2. Нажатие pad [14] или [16] переключает: BUS-1 → BUS-2 → DRY.</td></tr>
+            <tr><td>[RESAMPLE] + [VALUE] knob</td><td>VOLUME CURVE</td><td>Выбирает характеристику кривой громкости для слайдеров (CH1 LEVEL, CH2 LEVEL, X-FADE) в режиме DJ. Переключение: FAST CUT → LINEAR → SQUARE → CUBIC.</td></tr>
+            <tr><td>[DEL] + pad [2] + pad [6] (CH1)<br>[DEL] + pad [4] + pad [8] (CH2)</td><td>BPM</td><td>Сбрасывает темп к значению по умолчанию.</td></tr>
+            <tr><td>[START/END] button</td><td>-</td><td>Переключает функцию ручки [CTRL 3] между CUE MIX и X-FADE.</td></tr>
+            <tr><td>[PITCH/SPEED] button</td><td>-</td><td>Изменяет отображение цифр BPM (целые → сотые → десятые → целые).</td></tr>
+            <tr><td>[MARK] button</td><td>-</td><td>Переключает вид экрана между EFX и MIXER.</td></tr>
+            <tr><td>[BPM SYNC] button</td><td>-</td><td>Выбирает канал (CH1/CH2) для управления реверсом (кнопка [REVERSE]).</td></tr>
+        </tbody>
+    </table>
+
+    <div class="page-marker" id="marker-other-cont">Горячие клавиши в TR-REC</div>
+    <table id="table-other-cont">
+        <thead><tr><th>Действие</th><th>Описание</th></tr></thead>
+        <tbody>
+            <tr><td>[DEL] + [A/F] button</td><td>Удаляет ноты (на один такт), соответствующие выбранному пэду.</td></tr>
+            <tr><td>[DEL] + [B/G] button</td><td>Удаляет ноты (на один такт) для всех пэдов.</td></tr>
+            <tr><td>[ROLL] + [CTRL 1] knob</td><td>Записывает движение ручки [CTRL 1] в шаги (активно в режиме "TRIG").</td></tr>
+            <tr><td>[ROLL] + [CTRL 2] knob</td><td>Записывает движение ручки [CTRL 2] в шаги (активно в режиме "TRIG").</td></tr>
+            <tr><td>[ROLL] + [CTRL 3] knob</td><td>Записывает движение ручки [CTRL 3] в шаги (активно в режиме "TRIG").</td></tr>
+            <tr><td>[VALUE] knob (press) + [SUB PAD] + pads [1]-[16]</td><td>Выбирает сэмплы без их воспроизведения.</td></tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <a href="https://github.com/alei1180/sp-404mk2-shortcut" target="_blank">Shortcuts for Roland SP-404 MKII</a>
+            by <a href="https://github.com/alei1180" target="_blank">Alexander Osadchy</a> | 
+            <a href="https://dalink.to/alei1180" target="_blank">Donate</a>
+    </footer>
+
+</div>
+
+<script>
+    function filterTables() {
+        const filter = document.getElementById('searchInput').value.toLowerCase().trim();
+        const tables = document.querySelectorAll('table');
+        const markers = document.querySelectorAll('.page-marker');
+        let totalVisibleRows = 0;
+        let visibleTablesCount = 0;
+
+        if (filter === '') {
+            tables.forEach(table => {
+                table.classList.remove('table-hidden');
+                const rows = table.querySelectorAll('tbody tr');
+                rows.forEach(row => row.style.display = '');
+            });
+            markers.forEach(marker => marker.classList.remove('marker-hidden'));
+            document.getElementById('noResultsMessage').style.display = 'none';
+            return;
+        }
+
+        tables.forEach((table, index) => {
+            const rows = table.querySelectorAll('tbody tr');
+            let tableHasVisibleRows = false;
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                let rowText = '';
+                cells.forEach(cell => {
+                    rowText += cell.textContent.toLowerCase() + ' ';
+                });
+
+                if (rowText.includes(filter)) {
+                    row.style.display = '';
+                    tableHasVisibleRows = true;
+                    totalVisibleRows++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            if (tableHasVisibleRows) {
+                table.classList.remove('table-hidden');
+                visibleTablesCount++;
+                
+                if (markers[index]) {
+                    markers[index].classList.remove('marker-hidden');
+                }
+            } else {
+                table.classList.add('table-hidden');
+                if (markers[index]) {
+                    markers[index].classList.add('marker-hidden');
+                }
+            }
+        });
+
+        if (totalVisibleRows === 0) {
+            document.getElementById('noResultsMessage').style.display = 'block';
+        } else {
+            document.getElementById('noResultsMessage').style.display = 'none';
+        }
+    }
+
+    let timeout;
+    document.getElementById('searchInput').addEventListener('input', function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(filterTables, 100);
+    });
+    
+    document.getElementById('searchButton').addEventListener('click', filterTables);
+    
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            filterTables();
+        }
+    });
+
+    window.addEventListener('load', filterTables);
+</script>
+
+</body>
+</html>
