@@ -39,12 +39,24 @@
             }
 
             .search-compact {
-                width: 100%;
+                display: flex;
+                align-items: center;
+                background-color: #f5f5f5;
+                border-radius: 30px;
+                padding: 4px 6px 4px 12px;
+                border: 1px solid #ddd;
+                transition: border-color 0.3s;
+                gap: 6px;
+                overflow: visible;
             }
 
             #searchInput {
-                width: 100%;
-                font-size: 16px;
+                flex: 1;
+                padding: 8px 10px;
+                font-size: 0.95em;
+                border: none;
+                background: transparent;
+                outline: none;
             }
 
             table,
@@ -351,6 +363,188 @@
                 width: 100%;
             }
         }
+
+        .theme-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            background: #f5f5f5;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.2s ease;
+
+        }
+
+        .theme-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .theme-btn.active {
+            border: 2px solid #2c8656;
+        }
+
+        body.dark-theme {
+            background-color: #1e1e1e;
+            color: #e4e4e4;
+        }
+
+        body.dark-theme .container {
+            background-color: #2a2a2a;
+            box-shadow: none;
+        }
+
+        body.dark-theme table {
+            background-color: #2a2a2a;
+        }
+
+        body.dark-theme th {
+            background-color: #355f4a;
+        }
+
+        body.dark-theme td {
+            border-color: #444;
+        }
+
+        body.dark-theme tr:nth-child(even) {
+            background-color: #242424;
+        }
+
+        body.dark-theme .search-compact {
+            background-color: #333;
+            border-color: #444;
+        }
+
+        body.dark-theme #searchInput {
+            color: #fff;
+        }
+
+        body.dark-theme .note {
+            background-color: #2e2a1f;
+            border-left-color: #2c8656;
+        }
+
+        .theme-dropdown {
+            position: relative;
+        }
+
+        .theme-toggle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        .theme-toggle:hover {
+            background: #e0e0e0;
+        }
+
+        .theme-menu {
+            position: absolute;
+            top: 42px;
+            right: 0;
+
+            background: white;
+            border-radius: 16px;
+            padding: 6px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+            opacity: 0;
+            transform: translateY(-8px) scale(0.96);
+            pointer-events: none;
+            transition: all 0.18s ease;
+            overflow: visible;
+        }
+
+        .theme-menu.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .theme-option {
+            width: 32px;
+            height: 32px;
+            border-radius: 12px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: background 0.15s ease, transform 0.12s ease;
+        }
+
+        .theme-option:hover {
+            background: rgba(0, 0, 0, 0.08);
+            transform: scale(1.05);
+        }
+
+        .theme-option:active {
+            transform: scale(0.95);
+        }
+
+        body.dark-theme .theme-menu {
+            background: #2a2a2a;
+        }
+
+        body.dark-theme .theme-option:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        footer {
+            color: #222;
+        }
+
+        footer a {
+            color: #222;
+            text-decoration: underline;
+        }
+
+        footer a:hover,
+        footer a:active,
+        footer a:visited {
+            color: #222;
+            text-decoration: underline;
+        }
+
+        body.dark-theme footer {
+            color: #fff;
+        }
+
+        body.dark-theme footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        body.dark-theme footer a:hover,
+        body.dark-theme footer a:active,
+        body.dark-theme footer a:visited {
+            color: #fff;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -358,13 +552,30 @@
     <div class="container">
 
         <div class="header-with-search">
+
             <div class="title-section">
                 <h1>Горячие клавиши Roland SP-404MK2</h1>
             </div>
 
-            <div class="search-compact">
-                <input type="text" id="searchInput" placeholder="Поиск..." autocomplete="off">
+            <div class="search-wrapper">
+
+                <div class="search-compact">
+
+                    <input type="text" id="searchInput" placeholder="Поиск..." autocomplete="off">
+
+                    <div class="theme-dropdown">
+                        <button class="theme-toggle" id="themeToggle">💻</button>
+                        <div class="theme-menu" id="themeMenu">
+                            <button class="theme-option" data-theme="light">☀️</button>
+                            <button class="theme-option" data-theme="dark">🌙</button>
+                            <button class="theme-option" data-theme="system">💻</button>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
 
         <div id="noResultsMessage" class="no-results-message">
@@ -554,7 +765,8 @@
                     <td>[REC] button</td>
                     <td>TR-REC</td>
                     <td>Переключает в режим записи паттерна с помощью TR-REC. Записывает сэмплы в играющий паттерн.
-                        <br>* Работает только при воспроизведении паттерна.</td>
+                        <br>* Работает только при воспроизведении паттерна.
+                    </td>
                 </tr>
                 <tr>
                     <td>Bank [A/F]-[E/J] buttons</td>
@@ -971,8 +1183,6 @@
             timeout = setTimeout(filterTables, 100);
         });
 
-        document.getElementById('searchButton').addEventListener('click', filterTables);
-
         document.getElementById('searchInput').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 filterTables();
@@ -980,6 +1190,65 @@
         });
 
         window.addEventListener('load', filterTables);
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const themeToggle = document.getElementById('themeToggle');
+            const themeMenu = document.getElementById('themeMenu');
+            const themeOptions = document.querySelectorAll('.theme-option');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+            function getThemeIcon(theme) {
+                if (theme === 'light') return '☀️';
+                if (theme === 'dark') return '🌙';
+                return '💻';
+            }
+
+            function applyTheme(theme) {
+                document.body.classList.remove('dark-theme');
+
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                } else if (theme === 'system') {
+                    if (prefersDark.matches) {
+                        document.body.classList.add('dark-theme');
+                    }
+                }
+
+                localStorage.setItem('theme', theme);
+                themeToggle.textContent = getThemeIcon(theme);
+            }
+
+            function loadTheme() {
+                const savedTheme = localStorage.getItem('theme') || 'system';
+                applyTheme(savedTheme);
+            }
+
+            themeToggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                themeMenu.classList.toggle('show');
+            });
+
+            themeOptions.forEach(option => {
+                option.addEventListener('click', function () {
+                    const selectedTheme = this.dataset.theme;
+                    applyTheme(selectedTheme);
+                    themeMenu.classList.remove('show');
+                });
+            });
+
+            document.addEventListener('click', function () {
+                themeMenu.classList.remove('show');
+            });
+
+            prefersDark.addEventListener('change', function () {
+                if (localStorage.getItem('theme') === 'system') {
+                    applyTheme('system');
+                }
+            });
+
+            loadTheme();
+        });
     </script>
 
 </body>
