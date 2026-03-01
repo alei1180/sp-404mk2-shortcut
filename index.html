@@ -155,6 +155,22 @@
                 content: "Описание";
             }
 
+            #table-mfx-advanced td:nth-of-type(1):before {
+                content: "Удерживая [MFX]";
+            }
+
+            #table-mfx-advanced td:nth-of-type(2):before {
+                content: "Описание";
+            }
+
+            #table-mfx-advanced-2 td:nth-of-type(1):before {
+                content: "Удерживая [MFX]";
+            }
+
+            #table-mfx-advanced-2 td:nth-of-type(2):before {
+                content: "Описание";
+            }
+
             #table-other td:nth-of-type(1):before {
                 content: "Действие [DJ mode]";
             }
@@ -968,6 +984,37 @@
                 <tr>
                     <td>[ISOLATOR] button</td>
                     <td>Отображает список MFX, начиная с номера 33.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-marker" id="marker-mfx-advanced">Расширенное редактирование семпла</div>
+        <table id="table-mfx-advanced">
+            <thead>
+                <tr>
+                    <th>В меню START/END</th>
+                    <th>Функция (описание)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[SHIFT] + [VALUE]</td>
+                    <td>Открывает меню редактирования длины семпла в семплах.<br>1 секунда = 48000 семплов (48кгц).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table id="table-mfx-advanced-2">
+            <thead>
+                <tr>
+                    <th>В меню PITCH/SPEED</th>
+                    <th>Функция (описание)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[SHIFT] + [VALUE]</td>
+                    <td>Открывает меню ручного выставления BPM.</td>
                 </tr>
             </tbody>
         </table>
