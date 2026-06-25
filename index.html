@@ -155,23 +155,31 @@
                 content: "Описание";
             }
 
-            #table-other td:nth-of-type(1):before {
+            #table-dj-mode td:nth-of-type(1):before {
                 content: "Действие [DJ mode]";
             }
 
-            #table-other td:nth-of-type(2):before {
+            #table-dj-mode td:nth-of-type(2):before {
                 content: "Параметр";
             }
 
-            #table-other td:nth-of-type(3):before {
+            #table-dj-mode td:nth-of-type(3):before {
                 content: "Описание";
             }
 
-            #table-other-cont td:nth-of-type(1):before {
+            #table-tr-rec td:nth-of-type(1):before {
                 content: "Действие [TR-REC]";
             }
 
-            #table-other-cont td:nth-of-type(2):before {
+            #table-tr-rec td:nth-of-type(2):before {
+                content: "Описание";
+            }
+
+            #table-looper td:nth-of-type(1):before {
+                content: "Действие [LOOPER]";
+            }
+
+            #table-looper td:nth-of-type(2):before {
                 content: "Описание";
             }
 
@@ -1007,7 +1015,7 @@
         </table>
 
         <div class="page-marker" id="marker-other">Горячие клавиши в DJ mode</div>
-        <table id="table-other">
+        <table id="table-dj-mode">
             <thead>
                 <tr>
                     <th>Действие [DJ mode]</th>
@@ -1106,7 +1114,7 @@
         </table>
 
         <div class="page-marker" id="marker-other-cont">Горячие клавиши в TR-REC</div>
-        <table id="table-other-cont">
+        <table id="table-tr-rec">
             <thead>
                 <tr>
                     <th>Действие [TR-REC]</th>
@@ -1141,9 +1149,33 @@
             </tbody>
         </table>
 
+        <div class="page-marker" id="marker-other-cont">Горячие клавиши в LOOPER</div>
+        <table id="table-looper">
+            <thead>
+                <tr>
+                    <th>Действие [LOOPER]</th>
+                    <th>Описание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[SHIFT] button + [CTRL 1] knob</td>
+                    <td>Задает шину, на которую отправляются входные аудиосигналы (то есть, какие эффекты используются).
+                        <br>* При наложении звука в режиме лупера этот параметр необходимо установить в значение «LOOPER». При этом параметре эффекты не применяются к воспроизводимому в лупере звуку.</td>
+                </tr>
+                <tr>
+                    <td>[SHIFT] button + [CTRL 2] knob</td>
+                    <td>Выбирает источник для сэмплирования. Если установлено значение «Mix», устройство сэмплирует смешанный звук с этого устройства (воспроизводимый звук) и входной сигнал с внешнего источника. Если установлено значение «ExtIn», устройство сэмплирует только входной аудиосигнал с внешнего устройства.</td>
+                </tr>
+                <tr>
+                    <td>[SHIFT] button + [VALUE] knob (повернуть)</td>
+                    <td>Устанавливает громкость метронома.</td>
+                </tr>
+            </tbody>
+        </table>
+
         <footer>
-            <a href="https://github.com/alei1180/sp-404mk2-shortcut" target="_blank">Shortcuts for Roland SP-404
-                MKII</a>
+            <a href="https://github.com/alei1180/sp-404mk2-shortcut" target="_blank">Shortcuts for Roland SP-404 MKII</a>
             by <a href="https://github.com/alei1180" target="_blank">Alexander Osadchy</a> |
             <a href="https://dalink.to/alei1180" target="_blank">Donate</a>
         </footer>
