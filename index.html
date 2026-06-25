@@ -160,10 +160,6 @@
             }
 
             #table-dj-mode td:nth-of-type(2):before {
-                content: "Параметр";
-            }
-
-            #table-dj-mode td:nth-of-type(3):before {
                 content: "Описание";
             }
 
@@ -1019,95 +1015,78 @@
             <thead>
                 <tr>
                     <th>Действие [DJ mode]</th>
-                    <th>Параметр</th>
                     <th>Описание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>[SHIFT] + [REVERSE] + pad [13] (CH1)<br>[SHIFT] + [REVERSE] + pad [15] (CH2)</td>
-                    <td>MUTE</td>
                     <td>Заглушает воспроизводящийся сэмпл.</td>
                 </tr>
                 <tr>
                     <td>[SHIFT] + pads [1]–[16]</td>
-                    <td>-</td>
                     <td>Воспроизведение сэмпла с позиции маркера, установленного для этого сэмпла.</td>
                 </tr>
                 <tr>
                     <td>[SHIFT] + [REMAIN]</td>
-                    <td>-</td>
                     <td>Фиксирует кнопку [SHIFT] в нажатом состоянии. Упрощает выбор маркера и воспроизведение. Нажмите
                         [EXIT] для отмены.</td>
                 </tr>
                 <tr>
                     <td>[SHIFT] + [MARK]</td>
-                    <td>-</td>
                     <td>Добавление маркеров во время проигрывания сэмпла в режиме DJ.</td>
                 </tr>
                 <tr>
                     <td>[SHIFT] + [START/END]</td>
-                    <td>-</td>
                     <td>Редактирование маркеров во время проигрывания сэмпла в режиме DJ.</td>
                 </tr>
                 <tr>
                     <td>[SHIFT] + [DEL] + pads [1]–[16]</td>
-                    <td>-</td>
                     <td>В режиме DJ удаляет маркеры, установленные для сэмплов.</td>
                 </tr>
                 <tr>
                     <td>[SHIFT] + [ROLL]</td>
-                    <td>ROLL SIZE</td>
                     <td>Устанавливает интервал ролла (1/4, 1/2, 1 или 2 такта). Устанавливайте до начала воспроизведения
                         ролла.</td>
                 </tr>
                 <tr>
                     <td>[ROLL] + pad [13] (CH1)</td>
-                    <td>-</td>
                     <td>Зацикливает воспроизведение сэмпла с заданным интервалом (ROLL). Не работает, если интервал
                         ролла длиннее сэмпла.</td>
                 </tr>
                 <tr>
                     <td>[ROLL] + pads [1]–[4]</td>
-                    <td>-</td>
                     <td>Изменяет интервал ролла во время его воспроизведения.<br>Pad [1]: четверть (1/4)<br>Pad [2]:
                         половинная (1/2)<br>Pad [3]: целая нота (1)<br>Pad [4]: две целых (2)</td>
                 </tr>
                 <tr>
                     <td>[REMAIN] + pad [14] (CH1)<br>[REMAIN] + pad [16] (CH2)</td>
-                    <td>BUS FX</td>
                     <td>Устанавливает шину для сэмплов CH1/CH2. Нажатие pad [14] или [16] переключает: BUS-1 → BUS-2 →
                         DRY.</td>
                 </tr>
                 <tr>
                     <td>[RESAMPLE] + [VALUE] knob</td>
-                    <td>VOLUME CURVE</td>
                     <td>Выбирает характеристику кривой громкости для слайдеров (CH1 LEVEL, CH2 LEVEL, X-FADE) в режиме
                         DJ. Переключение: FAST CUT → LINEAR → SQUARE → CUBIC.</td>
                 </tr>
                 <tr>
                     <td>[DEL] + pad [2] + pad [6] (CH1)<br>[DEL] + pad [4] + pad [8] (CH2)</td>
-                    <td>BPM</td>
                     <td>Сбрасывает темп к значению по умолчанию.</td>
                 </tr>
                 <tr>
                     <td>[START/END] button</td>
-                    <td>-</td>
                     <td>Переключает функцию ручки [CTRL 3] между CUE MIX и X-FADE.</td>
                 </tr>
                 <tr>
                     <td>[PITCH/SPEED] button</td>
-                    <td>-</td>
                     <td>Изменяет отображение цифр BPM (целые → сотые → десятые → целые).</td>
                 </tr>
                 <tr>
                     <td>[MARK] button</td>
-                    <td>-</td>
                     <td>Переключает вид экрана между EFX и MIXER.</td>
                 </tr>
                 <tr>
                     <td>[BPM SYNC] button</td>
-                    <td>-</td>
                     <td>Выбирает канал (CH1/CH2) для управления реверсом (кнопка [REVERSE]).</td>
                 </tr>
             </tbody>
@@ -1170,6 +1149,14 @@
                 <tr>
                     <td>[SHIFT] button + [VALUE] knob (повернуть)</td>
                     <td>Устанавливает громкость метронома.</td>
+                </tr>
+                <tr>
+                    <td>[SHIFT] button + [PATTERN SELECT] button</td>
+                    <td>Отменяет только что введенные (записанные) данные. Повторное использование этой функции отменяет действие отмены. Эта функция активируется при воспроизведении или остановке воспроизведения записанных данных.</td>
+                </tr>
+                <tr>
+                    <td>[PITCH/SPEED] button + Pads [1]–[16]</td>
+                    <td>Устанавливает темп лупера равным темпу, заданному для сэмпла пэда.</td>
                 </tr>
             </tbody>
         </table>
